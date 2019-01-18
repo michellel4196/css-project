@@ -6,31 +6,154 @@
   <meta name="viewport" content="width=device-width">
   <title>CSS3 PROJECT</title>
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Allura|Source+Code+Pro:600" rel="stylesheet">
   <style>
-    h1 {
+    header {
       font-family: 'Nunito', sans-serif;
-      text-shadow: 2px 2px 4px gray;
+      text-shadow: 2px 2px 4px black;
       text-align: center;
+      padding: 80px;
+      margin: 0;
+      color: white;
+      /*font-size: 20px;*/
+    }
+
+    .typewriter h1 {
+      font-family: monospace;
+      overflow: hidden;
+      /* Ensures the content is not revealed until the animation */
+      border-right: .15em solid orange;
+      /* The typwriter cursor */
+      white-space: nowrap;
+      /* Keeps the content on a single line */
+      margin: 0 auto;
+      /* Gives that scrolling effect as the typing happens */
+      letter-spacing: .15em;
+      /* Adjust as needed */
+      animation: typing 3.5s steps(30, end),
+      blinking-cursor .5s step-end infinite;
+    }
+
+    /* The typing effect */
+
+    @keyframes typing {
+      from {
+        width: 0
+      }
+      to {
+        width: 100%
+      }
+    }
+
+    /* The typewriter cursor effect */
+
+    @keyframes blinking-cursor {
+      from,
+      to {
+        border-color: transparent
+      }
+      50% {
+        border-color: orange;
+      }
+    }
+
+    /*header*/
+
+    #bg-1 {
+      background: url(sunset.jpg);
+      background-size: cover;
+      margin: 0;
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Source Code Pro', monospace;
+      transition: width 2s, height 2s, transform 2s;
+    }
+
+    h2:hover {
+      width: center;
+      height: 0px;
+      transform: rotate(360deg);
+    }
+
+    p {
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: black;
+    }
+
+    ul li {
+      padding: 50px;
+      margin: 0px;
+    }
+
+    #grad1 {
+      height: 200px;
+      /*background-color: red;*/
+      /* For browsers that do not support gradients */
+      background-image: linear-gradient(pink, white);
+      /* Standard syntax (must be last) */
+      background-color: white;
+      margin: 0px;
+      padding: 10px;
+      
     }
     
-    #bg-1{
-      background: url(blue-mountain-range.jpg);
-
+    #grad2 {
+      height: 300px;
+      /*background-color: red;*/
+      /* For browsers that do not support gradients */
+      background-image: linear-gradient(white, pink);
+      /* Standard syntax (must be last) */
+      background-color: white;
+      background-image: url(flower.png);
+      background-size: 200px, auto;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      padding-top: 68px;
+      padding-bottom: 100px;
+      margin-bottom: 50px;
     }
   </style>
 </head>
 
 <body>
-  <!--BACKGROUND-->
-  <div id="bg-1">
-    <h1>Hello! Welcome To My Website.</h1>
+
+  <div class="together">
+    <!--BACKGROUND-->
+    <div id="bg-1">
+      <div class="typewriter">
+        <header>
+          <h1>Hello! Welcome To My Website.</h1>
+        </header>
+      </div>
+    </div>
+
+    <!--ABOUT ME-->
+    <div id="grad1">
+      <h2>
+        About Me
+      </h2>
+      <!--description-->
+      <p> I go to HSTAT. I'm in the Software Engineering Program</p>
+    </div>
+    <div id="grad2">
+      <h2>Hobbies</h2>
+      <ul>
+        <li>Photography</li>
+        <li>Drawing</li>
+      </ul>
+    </div>
   </div>
-  <!--text shadow-->
-
-  <!--ABOUT ME-->
 
 
-  <!--description-->
+
+
+
+
   <!--image-->
 
 
